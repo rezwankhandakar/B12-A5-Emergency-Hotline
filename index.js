@@ -58,6 +58,10 @@ for (let callBtn of callBtns){
 const copyBtns = document.getElementsByClassName('copy-btn');
 for (let copyBtn of copyBtns){
     copyBtn.addEventListener('click',function(){
+        const cardNumber = copyBtn.parentNode.parentNode.children[3].innerText
+        navigator.clipboard.writeText(cardNumber).then(() => {
+            alert(cardNumber + " copied to clipboard!");
+        });
         const copyCount = getElement('copy-count').innerText
         const curentCopyCount = Number(copyCount)+1;
         getElement('copy-count').innerText=curentCopyCount;
