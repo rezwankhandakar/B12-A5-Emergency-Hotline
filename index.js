@@ -28,7 +28,7 @@ for (let callBtn of callBtns){
         const totalCoine = getElement('total-coine').innerText
 
         if(totalCoine < 20){
-            alert("আপনার পর্যাপ্ত coin নেই! কল করতে ন্যূনতম 20 coin দরকার।");
+            alert("❌আপনার পর্যাপ্ত coin নেই! কল করতে ন্যূনতম 20 coin দরকার।");
             return;
         }
         const curentTotalCoine = Number(totalCoine)-20;
@@ -50,7 +50,7 @@ for (let callBtn of callBtns){
     
     `;
     callHistory.append(nweHistory)
-    alert(`Calling ${cardTitle} at ${cardNumber}`);
+    alert(`📞Calling ${cardTitle} at ${cardNumber}`);
     
     })
 }
